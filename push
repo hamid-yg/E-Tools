@@ -1,12 +1,12 @@
 #!/bin/bash
 
 RED='\033[0;31m'
-Green='\033[0;32m'
+GREEN='\033[0;32m'
 NC='\033[0m'
 
 echo -e "${RED}Enter your commit message${NC}"
 read message
-echo -e "Enter your remote server${NC}"
+echo -e "${RED}Enter your remote server${NC}"
 read remote_server
 echo -e "${GREEN}Cleaning repo${NC}"
 find . -type f \( -name "*~" -o -name "*.gcda" -o -name "*.gcno" -o -name "#*#" \) -delete
@@ -14,4 +14,4 @@ echo -e "${GREEN}Adding files${NC}"
 git add .
 git commit -m "${message}"
 echo -e "${GREEN}Pushing data to remote server !${NC}"
-git push -u origin ${remote_server}
+git push origin ${remote_server}
