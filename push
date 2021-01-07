@@ -1,12 +1,25 @@
 #!/bin/bash
 
-echo "Cleaning repo"
-find . -type f \( -name "*~" -o -name "*.gcda" -o -name "*.gcno" -o -name "#*#" \) -delete
-echo "Adding files"
+# echo "Cleaning repo"
+# # find . -type f \( -name "*~" -o -name "*.gcda" -o -name "*.gcno" -o -name "#*#" \) -delete
+# echo "Adding files"
+# git add .
+# echo "Commit changes"
+# git commit -m $1
+# echo "Pushing my work"
+# git push origin $2
+# echo "Listing files"
+# git ls-files
+
+echo "Enter your message"
+read message
 git add .
-echo "Commit changes"
-git commit -m $1
-echo "Pushing my work"
-git push origin main
-echo "Listing files"
-git ls-files
+git commit -m"${message}"
+if [ -n "$(git status - porcelain)" ];
+then
+ echo "IT IS CLEAN"
+else
+ git status
+ echo "Pushing data to remote server!!!"
+ git push -u origin master
+fi
