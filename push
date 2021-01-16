@@ -4,6 +4,7 @@ RED='\033[0;31m'
 GREEN='\033[0;32m'
 NC='\033[0m'
 
+git status
 echo -e "${RED}Enter your commit message${NC}"
 read message
 echo -e "${RED}Enter your remote server${NC}"
@@ -15,3 +16,5 @@ git add .
 git commit -m "${message}"
 echo -e "${GREEN}Pushing data to remote server !${NC}"
 git push origin ${remote_server}
+echo -e "${GREEN}Listing your remote files !${NC}"
+git ls-files
