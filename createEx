@@ -1,9 +1,14 @@
 #!/bin/bash
 
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+NC='\033[0m'
+
 if [ ! $1 ]
 then
-    echo "nothing"
+    echo -e "${RED}nothing${NC}"
 else
+    echo -e "${GREEN}Creating $1 files${NC}"
     for i in `seq 1 $1`;
         do
             if [ -d ex_0$1 ]
