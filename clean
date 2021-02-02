@@ -6,4 +6,4 @@ NC='\033[0m'
 
 echo -e "${RED}Cleaning repo${NC}"
 
-find . -type f \( -name "*~" -o -name "*.gcda" -o -name "*.gcno" -o -name "#*#" -o -name "*.out" -o -name "*.hi" -o -name "*.o" \) -delete
+find . -type f \( -name "*~" -o -name "*.gcda" -o -name "*.gcno" -o -name "#*#" -o -name "*.out" -o -name "*.hi" -o -name "*.o" -o -name "*.dyn_hi" -o -name "*.dyn_o" \) -delete
