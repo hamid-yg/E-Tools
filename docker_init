@@ -1,0 +1,12 @@
+#!/bin/bash
+
+GREEN='\033[0;32m'
+NC='\033[0m'
+
+SOURCE_FOLDER=`pwd`
+
+DEST_FOLDER=/home/student/
+
+echo -e "${GREEN}Init docker environment${NC}"
+
+docker run --rm -v "$SOURCE_FOLDER:$DEST_FOLDER" -it epitechcontent/epitest-docker /bin/bash -c 'useradd student && su - student'
