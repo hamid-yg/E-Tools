@@ -27,7 +27,7 @@ extn=".jpg"
 size="1920x1080"
 
 # Collection Path.
-path="$HOME/Pictures/Bing/"
+path="$HOME/google_drive/hamidtessilimi@gmail.com/PICTURES/Wallpapers"
 
 # Make it run just once (useful to run as a cron)
 #run_once=false
